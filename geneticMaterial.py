@@ -4,6 +4,12 @@ class DNA(object):
         self.__alelos = alelos
         self.__genname = gene_names
 
+    def __str__(self):
+        __str = ""
+        for gene, value in self.alelos.items():
+            __str += f" {gene}: {value:.2} "
+        return __str
+
     @property
     def alelos(self) -> dict:
         alelos = dict()
